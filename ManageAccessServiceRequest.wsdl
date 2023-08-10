@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://ibus.czncorp.com/ESB/ManageAccessServiceRequest" xmlns:tns="http://ManageAccessServiceRequestLibrary/ManageAccessServiceRequest" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ManageAccessServiceRequest" targetNamespace="http://ManageAccessServiceRequestLibrary/ManageAccessServiceRequest">
+	<wsdl:documentation>Version: 2.3</wsdl:documentation>
+	<wsdl:types>
+		<xsd:schema xmlns:bons1="http://ibus.czncorp.com/ESB/ManageAccessServiceRequest" xmlns:tns="http://ManageAccessServiceRequestLibrary/ManageAccessServiceRequest" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ManageAccessServiceRequestLibrary/ManageAccessServiceRequest">
+			<xsd:import namespace="http://ibus.czncorp.com/ESB/ManageAccessServiceRequest" schemaLocation="ManageAccessServiceRequest.xsd"/>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="ManageAccessServiceRequestProcessPreOrderRequestMsg">
+		<wsdl:part name="ManageAccessServiceRequestProcessPreOrderRequest" element="bons1:ManageAccessServiceRequestProcessPreOrderRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ManageAccessServiceRequestProcessPreOrderResponseMsg">
+		<wsdl:part name="ManageAccessServiceRequestProcessPreOrderResponse" element="bons1:ManageAccessServiceRequestProcessPreOrderResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ManageAccessServiceRequestSubmitASRRequestMsg">
+		<wsdl:part name="ManageAccessServiceRequestSubmitASRRequest" element="bons1:ManageAccessServiceRequestSubmitASRRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ManageAccessServiceRequestSubmitASRResponseMsg">
+		<wsdl:part name="ManageAccessServiceRequestSubmitASRResponse" element="bons1:ManageAccessServiceRequestSubmitASRResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ManageAccessServiceRequestUpdateASRStatusRequestMsg">
+		<wsdl:part name="ManageAccessServiceRequestUpdateASRStatusRequest" element="bons1:ManageAccessServiceRequestUpdateASRStatusRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ManageAccessServiceRequestUpdateASRStatusResponseMsg">
+		<wsdl:part name="ManageAccessServiceRequestUpdateASRStatusResponse" element="bons1:ManageAccessServiceRequestUpdateASRStatusResponse"/>
+	</wsdl:message>
+	<wsdl:message name="ManageAccessServiceRequestUpdateWorkAssignmentRequestMsg">
+		<wsdl:part name="ManageAccessServiceRequestUpdateWorkAssignmentRequest" element="bons1:ManageAccessServiceRequestUpdateWorkAssignmentRequest"/>
+	</wsdl:message>
+	<wsdl:message name="ManageAccessServiceRequestUpdateWorkAssignmentResponseMsg">
+		<wsdl:part name="ManageAccessServiceRequestUpdateWorkAssignmentResponse" element="bons1:ManageAccessServiceRequestUpdateWorkAssignmentResponse"/>
+	</wsdl:message>
+	<wsdl:portType name="ManageAccessServiceRequest">
+		<wsdl:operation name="UpdateASRStatus">
+			<wsdl:input name="ManageAccessServiceRequestUpdateASRStatusRequest" message="tns:ManageAccessServiceRequestUpdateASRStatusRequestMsg"/>
+			<wsdl:output name="ManageAccessServiceRequestUpdateASRStatusResponse" message="tns:ManageAccessServiceRequestUpdateASRStatusResponseMsg"/>
+		</wsdl:operation>
+		<wsdl:operation name="SubmitASR">
+			<wsdl:input name="ManageAccessServiceRequestSubmitASRRequest" message="tns:ManageAccessServiceRequestSubmitASRRequestMsg"/>
+			<wsdl:output name="ManageAccessServiceRequestSubmitASRResponse" message="tns:ManageAccessServiceRequestSubmitASRResponseMsg"/>
+		</wsdl:operation>
+		<wsdl:operation name="ProcessPreOrder">
+			<wsdl:input name="ManageAccessServiceRequestProcessPreOrderRequest" message="tns:ManageAccessServiceRequestProcessPreOrderRequestMsg"/>
+			<wsdl:output name="ManageAccessServiceRequestProcessPreOrderResponse" message="tns:ManageAccessServiceRequestProcessPreOrderResponseMsg"/>
+		</wsdl:operation>
+		<wsdl:operation name="UpdateWorkAssignment">
+			<wsdl:input name="ManageAccessServiceRequestUpdateWorkAssignmentRequest" message="tns:ManageAccessServiceRequestUpdateWorkAssignmentRequestMsg"/>
+			<wsdl:output name="ManageAccessServiceRequestUpdateWorkAssignmentResponse" message="tns:ManageAccessServiceRequestUpdateWorkAssignmentResponseMsg"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="ManageASRWSExport_ManageAccessServiceRequestHttpBinding" type="tns:ManageAccessServiceRequest">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+		<wsdl:operation name="UpdateASRStatus">
+			<soap:operation soapAction="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+			<wsdl:input name="ManageAccessServiceRequestUpdateASRStatusRequest">
+				<soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+			</wsdl:input>
+			<wsdl:output name="ManageAccessServiceRequestUpdateASRStatusResponse">
+				<soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="SubmitASR">
+			<soap:operation soapAction="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+			<wsdl:input name="ManageAccessServiceRequestSubmitASRRequest">
+				<soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+			</wsdl:input>
+			<wsdl:output name="ManageAccessServiceRequestSubmitASRResponse">
+				<soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="ProcessPreOrder">
+			<soap:operation soapAction="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+			<wsdl:input name="ManageAccessServiceRequestProcessPreOrderRequest">
+				<soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+			</wsdl:input>
+			<wsdl:output name="ManageAccessServiceRequestProcessPreOrderResponse">
+				<soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="UpdateWorkAssignment">
+			<soap:operation soapAction="" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+			<wsdl:input name="ManageAccessServiceRequestUpdateWorkAssignmentRequest">
+				<soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+			</wsdl:input>
+			<wsdl:output name="ManageAccessServiceRequestUpdateWorkAssignmentResponse">
+				<soap:body use="literal" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="ManageASRWSExport_ManageAccessServiceRequestHttpService">
+		<wsdl:port name="ManageASRWSExport_ManageAccessServiceRequestHttpPort" binding="tns:ManageASRWSExport_ManageAccessServiceRequestHttpBinding">
+			<soap:address location="http://localhost:9080/ManageAccessServiceRequestWeb/sca/ManageASRWSExport" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
